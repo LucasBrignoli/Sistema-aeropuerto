@@ -1,5 +1,68 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\main.c
+1727488848 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\main.c
 	<stdio.h>
 	<stdlib.h>
+	"pasajero.h"
+	"destino.h"
+	"aeropuerto.h"
+	"avion.h"
+
+1727459547 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"nodo.h"
+	"lista.h"
+
+1727459536 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\nodo.h
+
+1727459508 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\lista.h
+	"nodo.h"
+
+1727459558 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\nodo.c
+	<stdio.h>
+	<stdlib.h>
+	"nodo.h"
+
+1727489096 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"avion.h"
+	"aeropuerto.h"
+	"lista.h"
+
+1727490617 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"avion.h"
+	"destino.h"
+	"pasajero.h"
+	"lista.h"
+
+1727490584 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"destino.h"
+
+1727489096 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\pasajero.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pasajero.h"
+
+1727473872 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\pasajero.h
+
+1727487455 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.h
+	"lista.h"
+	"avion.h"
+
+1727488946 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.h
+	"lista.h"
+	"pasajero.h"
+	"destino.h"
+
+1727473268 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.h
 

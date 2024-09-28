@@ -31,9 +31,33 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="aeropuerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="aeropuerto.h" />
+		<Unit filename="avion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="avion.h" />
+		<Unit filename="destino.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="destino.h" />
+		<Unit filename="lista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lista.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="nodo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nodo.h" />
+		<Unit filename="pasajero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pasajero.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
