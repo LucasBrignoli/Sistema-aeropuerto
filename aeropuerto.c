@@ -41,12 +41,6 @@ void mostrarAeropuerto(AeropuertoPtr a){
     mostrarListaGenerico(a->listaAviones, &mostrarAvionDatoPtr);
 };
 
-/*void mostrarAeropuertoDatoPtr(void * d){
-   AeropuertoPtr a = *(AeropuertoPtr*)d;
-
-   mostrarAeropuerto(a);
-};*/
-
 ///GETTERS Y SETTERS
 //getters
 char* getNombre(AeropuertoPtr a){

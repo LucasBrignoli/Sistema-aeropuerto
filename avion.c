@@ -37,23 +37,28 @@ void mostrarAvion(AvionPtr a){
     mostrarListaGenerico(a->destinos, &mostrarDestinoDatoPtr);
 };
 
-int insertarPasajero(AvionPtr a, PasajeroPtr p){
-    int ret = 1;
+void insertarPasajero(AvionPtr a, PasajeroPtr p){
     if (a->capacidad == 0) {
         printf("\nNo hay mas asientos disponibles para agregar al pasajero %s\n", getApellido(p));
-        ret = 0;
     } else {
         insertarUltimo(a->listaPasajeros, p);
         a->capacidad = a->capacidad - 1;
     }
-
-    return ret;
 }
 
 void insertarDestino(AvionPtr a, DestinoPtr d){
     insertarPrimero(a->destinos,d);
 }
 
+void eliminarPasajero(AvionPtr a, int pos){
+    eliminarPosicion(a->listaPasajeros, pos);
+}
+
+int compararPasajeros(void* a, void* b){
+    PasajeroPtr p1 = (PasajeroPtr)a;
+    PasajeroPtr p2 = (PasajeroPtr)b;
+    return strcmp(getApellido(p1), getApellido(p2));
+}
 
 void mostrarAvionDatoPtr(void * d){
     DatoPtr a = (AvionPtr)d;

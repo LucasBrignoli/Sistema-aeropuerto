@@ -133,10 +133,8 @@ void eliminarPosicion(ListaPtr lista, int pos){
         printf("La lista está vacía.\n");
     }
     int tam = obtenerTamanio(lista);
-
     if (pos < 1 || pos > tam) {
         printf("La posicion es erronea\n");
-
     }
     if (pos == 1) {
         return eliminarPrimero(lista);
@@ -253,22 +251,23 @@ ListaPtr duplicarLista(ListaPtr lista){
     return nuevaLista;
 };
 
-int buscarDato(ListaPtr lista, DatoPtr datoBuscado, int (*compararFuncion)(DatoPtr, DatoPtr)) {
+int buscarDato(ListaPtr lista, void* datoBuscado, int (*compararFuncion)(void*, void*)) {
     if (lista == NULL || lista->primero == NULL) {
-        return -1;
+        return -1;  // Lista vacía o nula
     }
+
     NodoPtr actual = lista->primero;
-    int posicion = 1;
+    int posicion = 0;
 
     while (actual != NULL) {
+        posicion= posicion +1;
         if (compararFuncion(getDato(actual), datoBuscado) == 0) {
-            return posicion;
+            return posicion;  // Dato encontrado, devuelve la posición
         }
         actual = getSiguiente(actual);
-        posicion++;
     }
 
-    return -1;
+    return -1;  // Dato no encontrado
 }
 
 void insertarEnOrden(ListaPtr lista, DatoPtr dato, int (*compararFuncion)(DatoPtr, DatoPtr)){
