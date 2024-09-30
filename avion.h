@@ -16,6 +16,8 @@ AvionPtr crearAvion(char* t, int m, int c);
 // Post: Elimina el pasajero en la posición `pos` de la lista de pasajeros del avión.
 void eliminarPasajero(AvionPtr a, int pos);
 
+void eliminarDestino(AvionPtr a, int pos);
+
 // Pre: a y p no deben ser NULL. p debe ser un pasajero válido.
 // Post: Inserta al pasajero p en la lista de pasajeros del avión a.
 void insertarPasajero(AvionPtr a, PasajeroPtr p);
@@ -27,6 +29,18 @@ void insertarDestino(AvionPtr a, DestinoPtr d);
 // Pre: a y b no deben ser NULL. Ambos deben ser punteros a pasajeros válidos.
 // Post: Compara dos pasajeros por algún criterio (apellido, dni, etc.), devolviendo el resultado de la comparación.
 int compararPasajeros(void* a, void* b);
+
+// Pre: d1 y d2 no deben ser NULL, ambos deben apuntar a punteros de avión válidos.
+// Post: Devuelve un número negativo si d1 < d2, 0 si son iguales, o un número positivo si d1 > d2 según un criterio de comparación (matrícula, tipo, etc.).
+int compararAvionPtr(void * d1, void * d2);
+
+// Pre: a no debe ser NULL, y la lista de pasajeros dentro del avión debe existir y contener al menos un pasajero.
+// Post: Ordena la lista de pasajeros del avión a alfabéticamente por apellido.
+void ordenarPasajerosPorApellido(AvionPtr a);
+
+// Pre: a no debe ser NULL, y la lista de destinos dentro del avión debe existir y contener al menos un destino.
+// Post: Ordena la lista de destinos del avión a alfabéticamente por ciudad.
+void ordenarDestinoPtr(AvionPtr a);
 
 // Pre: a no debe ser NULL.
 // Post: Muestra la información del avión y sus listas de pasajeros y destinos.

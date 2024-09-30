@@ -41,28 +41,52 @@ int main()
     insertarDestino(a2,d5);
     insertarDestino(a1,d6);
     insertarDestino(a3,d1);
-    insertarAvion(ae1,a1);
     insertarAvion(ae1,a2);
+    insertarAvion(ae1,a1);
     insertarAvion(ae1,a3);
 
-    //mostrarAeropuerto(ae1);
+    mostrarAeropuerto(ae1);
     ///Ordenar pasajes
+    printf("================ SE ORDENAN LOS PASAJEROS ============\n");
     mostrarAvion(a2);
     printf("ORDENAR\n");
-    ordenarLista(getListaPasajeros(a2), compararPasajeroPtr);
-
+    ordenarPasajerosPorApellido(a2);
     mostrarAvion(a2);
 
     ///Eliminar pasajeros
+    printf("================ SE ELIMINAN LOS PASAJEROS ============\n");
     printf("ELIMINAR\n");
     eliminarPasajero(a2,3);
     mostrarAvion(a2);
     insertarPasajero(a2, p4);
     ///Buscar pasajeros... AVIONES...
+    printf("================ SE BUSCAN LOS PASAJEROS ============\n");
     PasajeroPtr pasajeroBuscado = crearPasajero("Freddie", 1323232, 'S');
     int posicion = buscarDato(getListaPasajeros(a2), pasajeroBuscado, compararPasajeros);
     printf("POSICION: %d\n", posicion);
 
+    ///ORDENAR DESTINOS
+    printf("================ SE ORDENAN LOS DESTINOS ============\n");
+    ordenarDestinoPtr(a1);
+    mostrarAvion(a1);
+    ///ELIMINAR DESTINOS
+    printf("================ SE ELIMINAN LOS DESTINOS ============\n");
+    eliminarDestino(a1, 3);
+    mostrarAvion(a1);
+    insertarDestino(a1,d2);
+    printf("================ SE BUSCAN LOS DESTINOS ============\n");
+    DestinoPtr destinoBuscado = crearDestino("JAPON",80.5,56.4);
+    int pos = buscarDato(getDestinos(a1) ,destinoBuscado ,&compararDestino);
+    printf("EL DESTINO QUE BUSCA ESTA EN LA POSICION: %d", pos);
 
+    ///ORDENAR AVIONES
+    mostrarAeropuerto(ae1);
+    printf("================ SE ORDENAN LOS AVIONES ============\n");
+    ordenarAviones(ae1);
+    mostrarAeropuerto(ae1);
+    printf("================ SE ELIMINAN LOS AVIONES ============\n");
+    eliminarAvion(ae1, 2);
+    mostrarAeropuerto(ae1);
+    insertarAvion(ae1, a2);
     return 0;
 }

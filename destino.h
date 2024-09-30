@@ -9,6 +9,10 @@ typedef struct destinoE * DestinoPtr;
 // Post: Devuelve un puntero a un destino creado con los valores asignados.
 DestinoPtr crearDestino(char* ciudad, float latitud, float longitud);
 
+// Pre: d1 y d2 no deben ser NULL, ambos deben apuntar a punteros de destino válidos.
+// Post: Devuelve un número negativo si d1 < d2, 0 si son iguales, o un número positivo si d1 > d2 según la ciudad del destino.
+int compararDestino(void *d1, void *d2);
+
 // Pre: d no debe ser NULL.
 // Post: Muestra los datos del destino d.
 void mostrarDestino(DestinoPtr d);

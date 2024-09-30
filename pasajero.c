@@ -20,11 +20,17 @@ PasajeroPtr crearPasajero(char* apellido,int dni,char ventanilla){
     return p;
 };
 
-int compararPasajeroPtr(void * d1, void * d2){
+/*int compararPasajeroPtr(void * d1, void * d2){
     PasajeroPtr dato1 = (PasajeroPtr) d1;
     PasajeroPtr dato2 = (PasajeroPtr) d2;
 
     return dato1->dni > dato2->dni;
+}*/
+int compararPasajeroPtr(void * d1, void * d2){
+    PasajeroPtr dato1 = (PasajeroPtr) d1;
+    PasajeroPtr dato2 = (PasajeroPtr) d2;
+
+    return strcmp(dato1->apellido,dato2->apellido);
 }
 
 void mostrarPasajero(PasajeroPtr p){

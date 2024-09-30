@@ -25,6 +25,14 @@ void liberarAeropuerto(AeropuertoPtr a);
 // Post: Muestra la información del aeropuerto y sus aviones.
 void mostrarAeropuerto(AeropuertoPtr a);
 
+// Pre: a no debe ser NULL, y la lista de aviones dentro del aeropuerto debe existir y contener al menos un avión.
+// Post: Ordena la lista de aviones del aeropuerto a según un criterio de comparación (como la matrícula o el tipo).
+void ordenarAviones(AeropuertoPtr a);
+
+// Pre: a no debe ser NULL, pos debe ser un índice válido dentro de la lista de aviones del aeropuerto.
+// Post: Elimina el avión en la posición `pos` de la lista de aviones del aeropuerto a.
+void eliminarAvion(AeropuertoPtr a, int pos);
+
 // GETTERS
 
 // Pre: a no debe ser NULL.

@@ -200,23 +200,36 @@ int obtenerTamanio(ListaPtr lista){
 };
 
 void ordenarLista(ListaPtr lista, int(*ordenarFuncion)(DatoPtr, DatoPtr)){
-    DatoPtr aux;
-    int tam = obtenerTamanio(lista);
+    int permutacion;
+    NodoPtr nodo;
+    NodoPtr ultimo = NULL;
 
-    for(int i=0; i< tam-1; i++){
-        NodoPtr actual = lista->primero;
-        NodoPtr siguiente = getSiguiente(actual);
+    if(obtenerTamanio(lista)< 2)
+    {
+        //ya esta ordenada, no hago nada
+    }
+    else
+    {
+        do
+        {
+            permutacion = 0 ;
+            nodo = lista->primero;
 
-        for(int j=i+1; j< tam; j++){
-            if(ordenarFuncion(getDato(actual),getDato(getSiguiente(actual)))){
-                aux = getDato(actual);
-                setDato(actual, getDato(siguiente)); ///getDato(actual) = getDato(getSiguiente(actual));
-                setDato(siguiente,aux);              ///getDato(getSiguiente(actual)) = aux;
+            while (getSiguiente(nodo) != ultimo)
+            {
+                if( ordenarFuncion(getDato(nodo),getDato(getSiguiente(nodo))) > 0)
+                {
+                    DatoPtr aux = getDato(nodo);
+                    setDato(nodo, getDato(getSiguiente(nodo)));
+                    setDato(getSiguiente(nodo), aux);
+                    permutacion = 1;
+
+                }
+                nodo = getSiguiente(nodo);
             }
-             actual = siguiente;
-             siguiente= getSiguiente(siguiente);
+            ultimo = nodo; //opcional!!!
         }
-        actual = lista->primero;
+        while (permutacion!=0);
     }
 };
 

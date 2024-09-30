@@ -41,6 +41,14 @@ void mostrarAeropuerto(AeropuertoPtr a){
     mostrarListaGenerico(a->listaAviones, &mostrarAvionDatoPtr);
 };
 
+void ordenarAviones(AeropuertoPtr a){
+    ordenarLista(a->listaAviones, &compararAvionPtr);
+}
+
+void eliminarAvion(AeropuertoPtr a, int pos){
+    eliminarPosicion(a->listaAviones, pos);
+}
+
 ///GETTERS Y SETTERS
 //getters
 char* getNombre(AeropuertoPtr a){

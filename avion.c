@@ -46,6 +46,25 @@ void insertarPasajero(AvionPtr a, PasajeroPtr p){
     }
 }
 
+int compararAvionPtr(void * d1, void * d2){
+    AvionPtr a1 = (AvionPtr)d1;
+    AvionPtr a2 = (AvionPtr)d2;
+
+    return a1->matricula > a2->matricula;
+}
+
+void ordenarPasajerosPorApellido(AvionPtr a){
+    ordenarLista(a->listaPasajeros, &compararPasajeroPtr);
+};
+
+void ordenarDestinoPtr(AvionPtr a){
+    ordenarLista(a->destinos, &compararDestino);
+}
+
+void eliminarDestino(AvionPtr a, int pos){
+    eliminarPosicion(a->destinos, pos);
+}
+
 void insertarDestino(AvionPtr a, DestinoPtr d){
     insertarPrimero(a->destinos,d);
 }

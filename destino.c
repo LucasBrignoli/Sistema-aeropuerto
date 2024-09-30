@@ -19,6 +19,13 @@ DestinoPtr crearDestino(char* ciudad, float latitud, float longitud){
     return d;
 };
 
+int compararDestino(void *d1, void *d2){
+    DestinoPtr de1 = (DestinoPtr)d1;
+    DestinoPtr de2 = (DestinoPtr)d2;
+
+    return strcmp(de1->ciudad, de2->ciudad);
+};
+
 void mostrarDestino(DestinoPtr d){
     printf("--------- DESTINO ---------\n");
 

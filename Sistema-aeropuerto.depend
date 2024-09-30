@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1727647721 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\main.c
+1727715677 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\main.c
 	<stdio.h>
 	<stdlib.h>
 	"avion.h"
@@ -7,7 +7,7 @@
 	"destino.h"
 	"aeropuerto.h"
 
-1727638212 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\lista.c
+1727712606 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\lista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -24,7 +24,7 @@
 	<stdlib.h>
 	"nodo.h"
 
-1727647743 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.c
+1727715430 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -32,7 +32,7 @@
 	"aeropuerto.h"
 	"lista.h"
 
-1727647721 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.c
+1727715152 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -41,13 +41,13 @@
 	"pasajero.h"
 	"lista.h"
 
-1727647721 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.c
+1727713152 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"destino.h"
 
-1727638051 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\pasajero.c
+1727711817 source:c:\users\lucas\desktop\subir a git\sistema-aeropuerto\pasajero.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -56,14 +56,14 @@
 
 1727648109 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\pasajero.h
 
-1727647894 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.h
+1727716134 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\aeropuerto.h
 	"lista.h"
 	"avion.h"
 
-1727648086 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.h
+1727716134 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\avion.h
 	"lista.h"
 	"pasajero.h"
 	"destino.h"
 
-1727648125 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.h
+1727716087 c:\users\lucas\desktop\subir a git\sistema-aeropuerto\destino.h
 
